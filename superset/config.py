@@ -1523,8 +1523,8 @@ ENVIRONMENT_TAG_CONFIG = {
     "variable": "FLASK_ENV",
     "values": {
         "development": {
-            "color": "error.base",
-            "text": "Development",
+            "color": "",
+            "text":"",
         },
         "production": {
             "color": "",
