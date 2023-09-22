@@ -40,7 +40,7 @@ services:
 
   db:
     env_file: docker/.env
-    image: vadym13999/backup_postgres:latest
+    image: vadym13999/backup_postgres:superset_backup
     container_name: superset_db
     restart: unless-stopped
     ports:
