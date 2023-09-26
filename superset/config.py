@@ -281,7 +281,7 @@ SCHEDULED_QUERIES: Dict[str, Any] = {}
 # GLOBALS FOR APP Builder
 # ------------------------------
 # Uncomment to setup Your App name
-APP_NAME = "SimpleX"
+APP_NAME = "Datapunkt"
 
 # Specify the App icon
 APP_ICON = "/static/assets/images/superset-logo-horiz.png"
