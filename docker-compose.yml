@@ -40,13 +40,15 @@ services:
 
   db:
     env_file: docker/.env
-    image: vadym13999/backup_postgres:superset_backup
+    image: vadym13999/postgres_with_data:latest
     container_name: superset_db
     restart: unless-stopped
     ports:
       - "127.0.0.1:5432:5432"
+    environment:
+      - PGDATA=/var/lib/postgresql-static/data
     volumes:
-      - db_home:/var/lib/postgresql/data
+      - postgresql-static-data:/var/lib/postgresql-static/data   
 
   superset:
     env_file: docker/.env
@@ -160,6 +162,8 @@ volumes:
   superset_home:
     external: false
   db_home:
+    external: false
+  postgresql-static-data:
     external: false
   redis:
     external: false
